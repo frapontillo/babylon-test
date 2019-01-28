@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/widget_background"
+  android:layout_marginTop="@dimen/post_list_item_margin_top"
+  android:clickable="true"
+  android:focusable="true">
+
+  <TextView
+    android:id="@+id/post_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/post_body"
+    android:layout_marginStart="@dimen/post_list_item_default_margin_start_end"
+    android:layout_marginTop="@dimen/post_list_item_title_margin_top"
+    android:layout_marginEnd="@dimen/post_list_item_default_margin_start_end"
+    style="@style/PostList.Item.Title"
+    tools:text="Title of the post" />
+
+  <TextView
+    android:id="@+id/post_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/post_title"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginStart="@dimen/post_list_item_default_margin_start_end"
+    android:layout_marginTop="@dimen/post_list_item_body_margin_top"
+    android:layout_marginEnd="@dimen/post_list_item_default_margin_start_end"
+    android:layout_marginBottom="@dimen/post_list_item_body_margin_bottom"
+    style="@style/PostList.Item.Body"
+    tools:text="Body of the post, it can be short, long or very very very long like this or maybe even more and span multiple lines but no more than 3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

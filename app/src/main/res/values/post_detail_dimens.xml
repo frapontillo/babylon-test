@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="post_detail_default_margin_start_end">20dp</dimen>
+
+  <dimen name="post_detail_title_margin_top">20dp</dimen>
+  <dimen name="post_detail_title_margin_bottom">26dp</dimen>
+
+  <dimen name="post_detail_body_margin_top_bottom">26dp</dimen>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="error_description">Oops! There was an error while loading the data. Please try again. 🙏</string>
+  <string name="error_retry">Retry now</string>
+  <string name="error_description_with_data">Error while loading fresh data. Try again now or swipe down to refresh.</string>
+
+</resources>

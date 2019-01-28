@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="error_default_padding">16dp</dimen>
+
+  <dimen name="error_image_size">120dp</dimen>
+  <dimen name="error_image_margin">36dp</dimen>
+  <dimen name="error_text_margin">18dp</dimen>
+
+</resources>

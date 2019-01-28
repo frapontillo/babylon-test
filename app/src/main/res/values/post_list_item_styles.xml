@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="PostList" />
+
+  <style name="PostList.Item">
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="PostList.Item.Title" parent="Text.Header.2">
+    <item name="android:maxLines">2</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:textColor">@color/color_accent</item>
+  </style>
+
+  <style name="PostList.Item.Body" parent="Text.Body">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">3</item>
+    <item name="android:textColor">@color/text_primary</item>
+  </style>
+
+</resources>

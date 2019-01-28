@@ -1,0 +1,63 @@
+plugins {
+    id('io.gitlab.arturbosch.detekt').version('1.0.0-RC12')
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../dependencies.gradle'
+apply from: '../ktlint.gradle'
+
+detekt {
+    version = '1.0.0-RC12'
+    input = files('src/main/java')
+    filters = '.*/test/.*,.*/resources/.*,.*/build/.*'
+}
+
+check.dependsOn tasks['detekt']
+
+android {
+    compileSdkVersion versions.androidCompileSdk
+
+    defaultConfig {
+        minSdkVersion versions.androidMinSdk
+        targetSdkVersion versions.androidTargetSdk
+
+        applicationId "com.github.frapontillo.babylon"
+
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation libraries.androidKtx
+    implementation libraries.kotlinStdLib
+    implementation libraries.appCompat
+    implementation libraries.cardView
+    implementation libraries.constraintLayout
+    implementation libraries.design
+    implementation libraries.recyclerView
+    implementation libraries.rxJava
+    implementation libraries.rxKotlin
+    implementation libraries.rxAndroid
+    implementation libraries.retrofit
+    implementation libraries.retrofitGson
+    implementation libraries.retrofitRxJava
+    testImplementation librariesTest.jUnit
+    testImplementation librariesTest.mockito
+    testImplementation librariesTest.mockitoKotlin
+    testImplementation librariesTest.truth
+}

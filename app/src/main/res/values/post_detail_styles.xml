@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="PostDetail" />
+
+  <style name="PostDetail.Title" parent="Text.Header.1">
+    <item name="android:textColor">@color/color_accent</item>
+  </style>
+
+  <style name="PostDetail.Author" parent="Text.Subtitle">
+    <item name="android:textColor">@color/author</item>
+  </style>
+
+  <style name="PostDetail.Comments" parent="Text.Subtitle">
+    <item name="android:textAlignment">textEnd</item>
+    <item name="android:textColor">@color/color_accent_secondary</item>
+  </style>
+
+  <style name="PostDetail.Body" parent="Text.Body.Expanded">
+    <item name="android:textColor">@color/text_primary</item>
+  </style>
+
+</resources>

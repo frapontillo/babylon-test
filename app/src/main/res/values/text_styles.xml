@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Text" />
+
+  <style name="Text.Header">
+    <item name="android:fontFamily">@font/yesevaone</item>
+  </style>
+
+  <style name="Text.Header.1">
+    <item name="android:textSize">@dimen/h1_size</item>
+  </style>
+
+  <style name="Text.Header.2">
+    <item name="android:textSize">@dimen/h2_size</item>
+  </style>
+
+  <style name="Text.Subtitle">
+    <item name="android:textSize">@dimen/subtitle_size</item>
+  </style>
+
+  <style name="Text.Body">
+    <item name="android:fontFamily">@font/lora</item>
+    <item name="android:textSize">@dimen/body_size</item>
+  </style>
+
+  <style name="Text.Body.Expanded">
+    <item name="android:lineSpacingExtra">@dimen/body_line_spacing_extra</item>
+  </style>
+
+</resources>

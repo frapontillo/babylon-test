@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="post_list_item_margin_top">8dp</dimen>
+
+  <dimen name="post_list_item_default_margin_start_end">24dp</dimen>
+
+  <dimen name="post_list_item_title_margin_top">12dp</dimen>
+
+  <dimen name="post_list_item_body_margin_top">6dp</dimen>
+  <dimen name="post_list_item_body_margin_bottom">16dp</dimen>
+
+</resources>

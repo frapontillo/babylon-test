@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/main_view"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.github.frapontillo.babylon.detail.PostDetailActivity">
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/data_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/post_title" />
+
+      <TextView
+        android:id="@+id/post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/post_detail_default_margin_start_end"
+        android:layout_marginTop="@dimen/post_detail_title_margin_top"
+        android:layout_marginEnd="@dimen/post_detail_default_margin_start_end"
+        android:layout_marginBottom="@dimen/post_detail_title_margin_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/post_author"
+        style="@style/PostDetail.Title"
+        tools:text="This is the title" />
+
+      <TextView
+        android:id="@+id/post_author"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/post_detail_default_margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_title"
+        app:layout_constraintEnd_toStartOf="@id/post_comments"
+        app:layout_constraintBottom_toTopOf="@id/post_body"
+        style="@style/PostDetail.Author"
+        tools:text="By: John Doe" />
+
+      <TextView
+        android:id="@+id/post_comments"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/post_detail_default_margin_start_end"
+        app:layout_constraintStart_toEndOf="@id/post_author"
+        app:layout_constraintTop_toTopOf="@id/post_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/post_author"
+        style="@style/PostDetail.Comments"
+        tools:text="12 comments" />
+
+      <TextView
+        android:id="@+id/post_body"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_marginStart="@dimen/post_detail_default_margin_start_end"
+        android:layout_marginTop="@dimen/post_detail_body_margin_top_bottom"
+        android:layout_marginEnd="@dimen/post_detail_default_margin_start_end"
+        android:layout_marginBottom="@dimen/post_detail_body_margin_top_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/PostDetail.Body"
+        tools:text="This is the content of the post\nSome more text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
